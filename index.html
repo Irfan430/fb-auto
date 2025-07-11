@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facebook Auto Actions - Professional Automation Tool</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="/styles.css" rel="stylesheet">
+    
+    <meta name="description" content="Professional Facebook Auto Follower, Auto Liker, Auto Commenter web application">
+    <meta name="keywords" content="facebook, automation, auto like, auto follow, auto comment">
+    <meta name="author" content="Facebook Auto Actions">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container">
+            <a class="navbar-brand" href="/">
+                <i class="fab fa-facebook"></i>
+                Facebook Auto Actions
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/dashboard">
+                            <i class="fas fa-tachometer-alt"></i> Dashboard
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#actions">
+                            <i class="fas fa-magic"></i> Actions
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#features">
+                            <i class="fas fa-star"></i> Features
+                        </a>
+                    </li>
+                </ul>
+                
+                <ul class="navbar-nav">
+                    <li class="nav-item" id="loginBtn">
+                        <a class="nav-link btn btn-outline-light" href="/auth/login">
+                            <i class="fas fa-sign-in-alt"></i> Login
+                        </a>
+                    </li>
+                    <li class="nav-item" id="registerBtn">
+                        <a class="nav-link btn btn-success ms-2" href="/auth/register">
+                            <i class="fas fa-user-plus"></i> Register
+                        </a>
+                    </li>
+                    <li class="nav-item d-none" id="userMenu">
+                        <div class="dropdown">
+                            <button class="btn btn-outline-light dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                                <i class="fas fa-user"></i> <span id="userName">User</span>
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="/dashboard">
+                                    <i class="fas fa-tachometer-alt"></i> Dashboard
+                                </a></li>
+                                <li><a class="dropdown-item" href="#settings">
+                                    <i class="fas fa-cog"></i> Settings
+                                </a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item text-danger" href="#" id="logoutBtn">
+                                    <i class="fas fa-sign-out-alt"></i> Logout
+                                </a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="row align-items-center min-vh-100">
+                <div class="col-lg-6">
+                    <h1 class="display-4 fw-bold text-white mb-4">
+                        Professional Facebook Automation
+                    </h1>
+                    <p class="lead text-white-50 mb-4">
+                        Automate your Facebook interactions with our powerful, secure, and professional automation tool. 
+                        Like, comment, follow, and react to posts automatically.
+                    </p>
+                    <div class="d-flex gap-3">
+                        <a href="/auth/register" class="btn btn-primary btn-lg">
+                            <i class="fas fa-rocket"></i> Get Started
+                        </a>
+                        <a href="#features" class="btn btn-outline-light btn-lg">
+                            <i class="fas fa-info-circle"></i> Learn More
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="hero-image">
+                        <div class="card bg-dark text-white">
+                            <div class="card-body">
+                                <h5 class="card-title">
+                                    <i class="fab fa-facebook text-primary"></i> 
+                                    Facebook Auto Actions
+                                </h5>
+                                <div class="action-demo">
+                                    <div class="action-item">
+                                        <i class="fas fa-thumbs-up text-success"></i>
+                                        <span>Auto Like Posts</span>
+                                    </div>
+                                    <div class="action-item">
+                                        <i class="fas fa-heart text-danger"></i>
+                                        <span>Auto React</span>
+                                    </div>
+                                    <div class="action-item">
+                                        <i class="fas fa-comment text-info"></i>
+                                        <span>Auto Comment</span>
+                                    </div>
+                                    <div class="action-item">
+                                        <i class="fas fa-user-plus text-warning"></i>
+                                        <span>Auto Follow</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-5 bg-light">
+        <div class="container">
+            <div class="row text-center mb-5">
+                <div class="col-12">
+                    <h2 class="display-5 fw-bold">Powerful Features</h2>
+                    <p class="lead text-muted">Everything you need for professional Facebook automation</p>
+                </div>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body text-center">
+                            <div class="feature-icon mb-3">
+                                <i class="fas fa-shield-alt text-primary"></i>
+                            </div>
+                            <h5 class="card-title">Secure Authentication</h5>
+                            <p class="card-text">Advanced session management with encrypted cookie storage and automatic cleanup.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-3">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body text-center">
+                            <div class="feature-icon mb-3">
+                                <i class="fas fa-robot text-success"></i>
+                            </div>
+                            <h5 class="card-title">Smart Automation</h5>
+                            <p class="card-text">Intelligent automation with rate limiting, delays, and anti-detection measures.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-3">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body text-center">
+                            <div class="feature-icon mb-3">
+                                <i class="fas fa-chart-line text-info"></i>
+                            </div>
+                            <h5 class="card-title">Analytics Dashboard</h5>
+                            <p class="card-text">Comprehensive analytics and statistics to track your automation performance.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-3">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body text-center">
+                            <div class="feature-icon mb-3">
+                                <i class="fas fa-cloud text-warning"></i>
+                            </div>
+                            <h5 class="card-title">Cloud Ready</h5>
+                            <p class="card-text">Deploy on Render.com or any cloud platform with zero configuration.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Actions Section -->
+    <section id="actions" class="py-5">
+        <div class="container">
+            <div class="row text-center mb-5">
+                <div class="col-12">
+                    <h2 class="display-5 fw-bold">Available Actions</h2>
+                    <p class="lead text-muted">Professional Facebook automation at your fingertips</p>
+                </div>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4">
+                    <div class="action-card">
+                        <div class="action-icon">
+                            <i class="fas fa-thumbs-up"></i>
+                        </div>
+                        <h5>👍 Like Posts</h5>
+                        <p>Automatically like Facebook posts with intelligent targeting</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4">
+                    <div class="action-card">
+                        <div class="action-icon">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <h5>❤️ Love Reactions</h5>
+                        <p>React with love, haha, wow, sad, or angry to posts</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4">
+                    <div class="action-card">
+                        <div class="action-icon">
+                            <i class="fas fa-comment"></i>
+                        </div>
+                        <h5>💬 Auto Comment</h5>
+                        <p>Post custom comments with intelligent timing and content</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4">
+                    <div class="action-card">
+                        <div class="action-icon">
+                            <i class="fas fa-user-plus"></i>
+                        </div>
+                        <h5>✅ Auto Follow</h5>
+                        <p>Automatically follow users based on your criteria</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4">
+                    <div class="action-card">
+                        <div class="action-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <h5>⏰ Smart Timing</h5>
+                        <p>Intelligent delays and scheduling to avoid detection</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4">
+                    <div class="action-card">
+                        <div class="action-icon">
+                            <i class="fas fa-chart-bar"></i>
+                        </div>
+                        <h5>📊 Analytics</h5>
+                        <p>Track performance with detailed statistics and reports</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="row text-center mb-5">
+                <div class="col-12">
+                    <h2 class="display-5 fw-bold">How It Works</h2>
+                    <p class="lead text-muted">Simple steps to get started with Facebook automation</p>
+                </div>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="text-center">
+                        <div class="bg-primary text-white rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 80px; height: 80px;">
+                            <span class="h3 mb-0">1</span>
+                        </div>
+                        <h5>Register Account</h5>
+                        <p class="text-muted">Create your account with Facebook ID and cookies for secure authentication.</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="text-center">
+                        <div class="bg-success text-white rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 80px; height: 80px;">
+                            <span class="h3 mb-0">2</span>
+                        </div>
+                        <h5>Configure Actions</h5>
+                        <p class="text-muted">Set up your automation preferences and target URLs for actions.</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="text-center">
+                        <div class="bg-info text-white rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 80px; height: 80px;">
+                            <span class="h3 mb-0">3</span>
+                        </div>
+                        <h5>Monitor Results</h5>
+                        <p class="text-muted">Track your automation performance with detailed analytics and statistics.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-5 bg-primary text-white">
+        <div class="container text-center">
+            <h2 class="display-6 fw-bold mb-4">Ready to Automate?</h2>
+            <p class="lead mb-4">Join thousands of users who trust our professional Facebook automation platform.</p>
+            <div class="d-flex gap-3 justify-content-center">
+                <a href="/auth/register" class="btn btn-light btn-lg">
+                    <i class="fas fa-rocket"></i> Get Started Free
+                </a>
+                <a href="/auth/login" class="btn btn-outline-light btn-lg">
+                    <i class="fas fa-sign-in-alt"></i> Login
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5>Facebook Auto Actions</h5>
+                    <p class="text-muted">Professional Facebook automation tool for businesses and individuals.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <p class="text-muted mb-0">
+                        &copy; 2024 Facebook Auto Actions. All rights reserved.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Custom JS -->
+    <script src="/script.js"></script>
+</body>
+</html>
