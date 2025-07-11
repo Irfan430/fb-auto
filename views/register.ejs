@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= pageTitle %></title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="/styles.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container">
+            <a class="navbar-brand" href="/">
+                <i class="fab fa-facebook"></i>
+                Facebook Auto Actions
+            </a>
+            
+            <div class="navbar-nav ms-auto">
+                <a class="nav-link" href="/auth/login">
+                    <i class="fas fa-sign-in-alt"></i> Login
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Alert Container -->
+    <div id="alertContainer" class="container mt-3"></div>
+
+    <!-- Loading Container -->
+    <div id="loading" class="container mt-3" style="display: none;">
+        <div class="alert alert-info">
+            <div class="d-flex align-items-center">
+                <div class="spinner me-2"></div>
+                <span>Loading...</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Register Content -->
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-8 col-lg-6">
+                <div class="card shadow">
+                    <div class="card-header bg-success text-white text-center">
+                        <h4 class="mb-0">
+                            <i class="fas fa-user-plus"></i> Create Account
+                        </h4>
+                        <p class="mb-0">Join Facebook Auto Actions today</p>
+                    </div>
+                    <div class="card-body p-4">
+                        <form id="registerForm">
+                            <div class="mb-3">
+                                <label for="facebookId" class="form-label">Facebook ID</label>
+                                <input type="text" class="form-control" id="facebookId" name="facebookId" 
+                                       placeholder="Enter your Facebook ID" required>
+                                <div class="form-text">
+                                    Your Facebook numeric ID (found in your profile URL)
+                                </div>
+                            </div>
+                            
+                            <div class="mb-3">
+                                <label for="cookieString" class="form-label">Facebook Cookie String</label>
+                                <textarea class="form-control" id="cookieString" name="cookieString" 
+                                          rows="6" placeholder="Paste your Facebook cookie string here..." required></textarea>
+                                <div class="form-text">
+                                    <strong>How to get cookies:</strong>
+                                    <ol class="mt-2">
+                                        <li>Open Facebook in your browser</li>
+                                        <li>Press F12 to open Developer Tools</li>
+                                        <li>Go to Application/Storage tab</li>
+                                        <li>Find Cookies under facebook.com</li>
+                                        <li>Copy all cookie values</li>
+                                    </ol>
+                                </div>
+                            </div>
+                            
+                            <div class="d-grid">
+                                <button type="submit" class="btn btn-success">
+                                    <i class="fas fa-user-plus"></i> Create Account
+                                </button>
+                            </div>
+                        </form>
+
+                        <hr class="my-4">
+
+                        <!-- Additional Info -->
+                        <div class="text-center">
+                            <p class="text-muted mb-2">Already have an account?</p>
+                            <a href="/auth/login" class="btn btn-outline-primary">
+                                <i class="fas fa-sign-in-alt"></i> Login
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Features Preview -->
+                <div class="row mt-4">
+                    <div class="col-md-4">
+                        <div class="text-center">
+                            <i class="fas fa-thumbs-up text-success" style="font-size: 2rem;"></i>
+                            <h6 class="mt-2">Auto Like</h6>
+                            <small class="text-muted">Automatically like posts</small>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="text-center">
+                            <i class="fas fa-comment text-info" style="font-size: 2rem;"></i>
+                            <h6 class="mt-2">Auto Comment</h6>
+                            <small class="text-muted">Post comments automatically</small>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="text-center">
+                            <i class="fas fa-user-plus text-warning" style="font-size: 2rem;"></i>
+                            <h6 class="mt-2">Auto Follow</h6>
+                            <small class="text-muted">Follow users automatically</small>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Security Notice -->
+                <div class="alert alert-info mt-4">
+                    <h6><i class="fas fa-shield-alt"></i> Security Notice</h6>
+                    <p class="mb-0">
+                        Your Facebook cookies are encrypted and stored securely. We never store your password 
+                        and only use cookies for authentication. Your data is protected with industry-standard encryption.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Custom JS -->
+    <script src="/script.js"></script>
+</body>
+</html>
